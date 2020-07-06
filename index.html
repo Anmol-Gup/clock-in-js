@@ -177,15 +177,15 @@
             let s=t.getSeconds();
             if(h<10)
             {
-                h=h+'0';
+                h='0'+h;
             }
             if(m<10)
             {
-                m=m+'0';
+                m='0'+m;
             }
             if(s<10)
             {
-                s=s+'0';
+                s='0'+s;
             }
             h2.innerHTML=h+' : '+m+' : '+s;
             h3.innerHTML=days+' '+t.getDate()+' '+month+' '+t.getUTCFullYear();
