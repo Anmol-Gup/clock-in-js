@@ -165,7 +165,7 @@
             }
         }
 
-        b.addEventListener('click',function(){
+        b.addEventListener('click',function sum(){
             let t=new Date();
             a.classList.remove('area');
             let h=t.getHours();
@@ -190,6 +190,7 @@
             h2.innerHTML=h+' : '+m+' : '+s;
             h3.innerHTML=days+' '+t.getDate()+' '+month+' '+t.getUTCFullYear();
             b.style.display='none';
+            let show=setInterval(sum,1000);
         })
     </script>
 </body>
