@@ -132,24 +132,6 @@
         let h2=document.querySelector('h2');
         let h3=document.querySelector('h3');
         let b=document.querySelector('button');
-        function getmonth(k)
-        {
-            switch(k)
-            {
-                case 0: return 'January';break;
-                case 1: return 'February';break;
-                case 2: return 'March'; break;
-                case 3: return 'April';break;
-                case 4: return 'May';break;
-                case 5: return 'June';break;
-                case 6: return 'July';break;
-                case 7: return 'August';break;
-                case 8: return 'September';break;
-                case 9: return 'October';break;
-                case 10: return 'November';break;
-                case 11: return 'December';break;
-            }
-        }
 
         function getday(k)
         {
@@ -169,8 +151,23 @@
             let t=new Date();
             a.classList.remove('area');
             let h=t.getHours();
-            let mon=t.getUTCDate();
-            let month=getmonth(mon);
+            //let mon=t.getUTCDate();
+            let mon=t.getMonth();
+            switch(mon)
+            {
+                case 0: month='January';break;
+                case 1: month='February';break;
+                case 2: month='March'; break;
+                case 3: month='April';break;
+                case 4: month='May';break;
+                case 5: month='June';break;
+                case 6: month='July';break;
+                case 7: month='August';break;
+                case 8: month='September';break;
+                case 9: month='October';break;
+                case 10: month='November';break;
+                case 11: month='December';break;
+            }
             let day=t.getUTCDay();
             let days=getday(day);
             let m=t.getMinutes();
